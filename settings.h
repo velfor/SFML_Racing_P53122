@@ -14,7 +14,15 @@ const sf::Vector2f ROAD1_START_POS{ 100.f, 0.f };
 const sf::Vector2f ROAD2_START_POS{ 100.f, -WINDOW_HEIGHT };
 const std::string Doroga_File_Name("road.png");
 
-//const sf::Vector2f PesokStartPos{ 135,0 };
-//const std::string Pesok_File_Name("Pesok (2).jpg");
-
 const float ROADOBJ_SPEEDY = 2.f;
+const float LEFT_ROADSIDE = 100.f;
+const float RIGHT_ROADSIDE = 500.f;
+
+const std::string PLAYER_FILE_NAME("car.png");
+const float PLAYER_WIDTH = 85.f;
+const float PLAYER_HEIGHT = 168.f;
+sf::Vector2f PLAYER_START_POS{
+	(WINDOW_WIDTH - PLAYER_WIDTH) / 2.f,
+	WINDOW_HEIGHT - PLAYER_HEIGHT - 10.f
+};
+const float PLAYER_SPEED = 5.f;

@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "settings.h"
 #include "Roadobj.h"
+#include "player.h"
 using namespace sf;
 
 int main()
@@ -16,8 +17,9 @@ int main()
     Roadobj grass1, grass2;
     roadObjInit(grass1, GRASS1_START_POS, Trava_File_Name, 0.f);
 	roadObjInit(grass2, GRASS2_START_POS, Trava_File_Name, 0.f);
-    //Roadobj Pesok;
-    //roadObjInit(Pesok, PesokStartPos, Pesok_File_Name, 50.f);
+    Player player;
+    playerInit(player);
+
     while (window.isOpen())
     {
 
@@ -34,12 +36,14 @@ int main()
 		roadObjUpdate(grass2);
 		roadObjUpdate(road1);
 		roadObjUpdate(road2);
+        playerUpdate(player);
 		//Draw
         roadObjDraw(window, grass1);
 		roadObjDraw(window, grass2);
         //RoadObjDraw(window, Pesok);
         roadObjDraw(window, road1);
 		roadObjDraw(window, road2);
+        playerDraw(window, player);
         window.display();
     }
 
