@@ -1,7 +1,6 @@
 #pragma once
 #include "settings.h"
 
-
 struct Player {
 	sf::Texture texture;
 	sf::Sprite sprite;
